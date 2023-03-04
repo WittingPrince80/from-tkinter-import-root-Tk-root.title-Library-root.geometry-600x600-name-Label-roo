@@ -1,0 +1,59 @@
+from tkinter import *
+
+
+root = Tk()
+root.title("Library")
+root.geometry("600x600")
+
+name = Label(root,text = "BookAdder", bg = "blue", fg = "white")
+name.place(relx = 0.5, rely = 0.1 , anchor = CENTER)
+
+title = Label(root,text = "Title:", bg = "orange", fg = "white")
+title.place(relx = 0.4, rely = 0.2 , anchor = CENTER)
+title = Entry(root)
+title.place(relx= 0.6,rely = 0.2, anchor = CENTER)
+
+author = Label(root,text = "Author:", bg = "orange", fg = "white")
+author.place(relx = 0.4, rely = 0.3 , anchor = CENTER)
+author = Entry(root)
+author.place(relx= 0.6,rely = 0.3, anchor = CENTER)
+
+price = Label(root,text = "Price", bg = "orange", fg = "white")
+price.place(relx = 0.4, rely = 0.4 , anchor = CENTER)
+price = Entry(root)
+price.place(relx= 0.6,rely = 0.4, anchor = CENTER)
+
+DOB = Label(root,text = "YearPublished", bg = "orange", fg = "white")
+DOB.place(relx = 0.4, rely = 0.5 , anchor = CENTER)
+DOB = Entry(root)
+DOB.place(relx= 0.6,rely = 0.5, anchor = CENTER)
+
+age = Label(root,text = "Age", bg = "orange", fg = "white")
+age.place(relx = 0.4, rely = 0.6 , anchor = CENTER)
+age = Entry(root)
+age.place(relx= 0.6,rely = 0.6, anchor = CENTER)
+
+def createbook():
+
+    book1 = Book()
+    book1.add_book()
+    
+class Book:
+    def __init__(self):
+        self.citizen_name = title.get()
+        self.citizen_age = author.get()
+        self.citizen_dob = price.get()
+        self.citizen_id = DOB.get()
+        self.citizen_id = age.get()
+    
+    def add_book(self):
+        print("title: "+self.citizen_name)
+        print("author: "+str(self.citizen_age))
+        print("price: "+str(self.citizen_age))
+        print("Year Publishd: "+str+self.citizen_age)
+        print("This boom was added: "+str+self.citizen_age+"Years ago")
+        print("Citizen Added")
+
+btn = Button(root, text="Create Citizenship", command=createbook)  
+btn.place(relx= 0.5,rely = 0.7, anchor = CENTER )
+root.mainloop()
